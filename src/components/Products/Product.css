@@ -1,0 +1,17 @@
+.image-div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+img{
+    height: 200px;
+    width: 300px;
+}
+
+.products {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
