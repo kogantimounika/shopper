@@ -3,8 +3,8 @@
         {
             "_id":"dress1",
             "image":"images.jpg",
-            "title":"Sachin Tendulkar",
-            "description":"GOD",
+            "title":"CHOCOLATE",
+            "description":"Sweet",
             "availableSizes":["X","L","XL","XXL"],
             "price":29.9
         },
@@ -35,16 +35,16 @@
             {
                 "_id":"dress5",
                 "image":"images4.jpg",
-                "title":"STEVE SMITH",
-                "description":"ROCK",
+                "title":"SAM",
+                "description":"Cute",
                 "availableSizes":["X","L","XL","XXL"],
                 "price":219.9  
                 },
                 {
                     "_id":"dress6",
                     "image":"images5.jpg",
-                    "title":"ROHIT SHARMA",
-                    "description":"HITMAN",
+                    "title":"BOOKS",
+                    "description":"Interesting Stories",
                     "availableSizes":["X","L","XL","XXL"],
                     "price":219.9  
                     }

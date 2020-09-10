@@ -43,11 +43,24 @@
     grid-area: main;
     background-color: rgb(219, 215, 208);
     display: flex;
+    
+
 }
 .footer {
   grid-area: footer;
   background-color: #83a1c0;
   display: flex;
+  flex-wrap:wrap;
+}
+
+.mainContent{
+  display: flex;
+  flex: 3 60rem;
+}
+
+.sideBar{
+  display: flex;
+  flex:1 20rem;
 }
 
 
