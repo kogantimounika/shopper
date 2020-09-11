@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Container.css'
 import Product from './Products/Product';
-import data from '../data.json'
+import data from '../data.json';
+import Filter from "./Filter/Filter";
 
 class Container extends Component {
     constructor(props){
@@ -14,14 +15,15 @@ class Container extends Component {
         return (
             <div className="grid-container">
                 <div className="header">
-                    <a href="/">FLIPKART</a>
+                    <a href="/">My Shopping Cart</a>
                 </div>
                 <div className="main">
                     <div className="mainContent">
+                        <Filter></Filter> 
                         <Product products={this.state.products}/>
                     </div>
                     <div className="sideBar">
-                        SIDEBAR
+                        Empty Cart
                     </div>
                 </div>
                 <div className="footer">
@@ -36,3 +38,52 @@ class Container extends Component {
 export default Container;
 
 
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from 'react';
+// import './Container.css'
+// import Product from './Products/Product';
+// import data from '../data.json'
+// import Filter from './Filter/Filter'
+
+
+// class Container extends Component {
+//     constructor(props){
+//         super(props);
+//         this.state={
+//             products:data.products
+//         }
+//     }
+//     render() {
+//         return (
+//             <div className="grid-container">
+//                 <div className="header">
+//                     <a href="/">FLIPKART</a>
+//                 </div>
+//                 <div className="main">
+//                     <div className="mainContent">
+//                         <Filter></Filter>
+//                         <Product products={this.state.products}/>
+//                     </div>
+//                     <div className="sideBar">
+//                         SIDEBAR
+//                     </div>
+//                 </div>
+//                 <div className="footer">
+//                     ALL RIGHTS RESERVED
+//                 </div>
+
+//             </div>
+//         );
+//     }
+// }
+
+// export default Container;
