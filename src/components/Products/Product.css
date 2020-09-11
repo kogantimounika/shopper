@@ -1,4 +1,4 @@
-.image-div{
+ .image-div{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -9,9 +9,28 @@ img{
     width: 300px;
 }
 
+li{
+    /* flex :0 1 29rem; */
+    /* height: 47rem; */
+    /* margin: 1rem; */
+    /* padding: 1rem; */
+}
+
 .products {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
+}
+
+.des {
+    display: flex;
+    justify-content: space-around;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    
 }
