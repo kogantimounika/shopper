@@ -94,3 +94,9 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.sideBar{
+  display: flex;
+  flex:1 30rem;
+} 
+
