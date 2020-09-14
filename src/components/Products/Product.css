@@ -20,7 +20,7 @@ li{
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0;
 }
 
@@ -32,5 +32,5 @@ li{
 .price{
     display: flex;
     justify-content: space-between;
-    
+    padding-bottom: 10px;
 }
