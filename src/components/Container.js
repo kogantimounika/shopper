@@ -3,17 +3,21 @@ import './Container.css'
 import Product from './Products/Product';
 import data from '../data.json';
 import Filter from "./Filter/Filter";
+import Cart from './Cart/Cart';
 
 class Container extends Component {
     constructor(props){
         super(props);
-    
         this.state={
             products:data.products,
             sort:"",
-            size : ""
+            size : "",
+            count:"",
+            cartItems : [],
         }
     }
+
+    
     sortProducts=(event) =>{
         // alert(event.target.value);
         const sort = event.target.value;
@@ -21,13 +25,13 @@ class Container extends Component {
             {
                 sort:sort,
                 products:data.products.sort((a,b)=>{
-                    alert(a.price);
-                    alert(b.price);
+                    // alert(a.price);
+                    // alert(b.price);
                     if(sort==="lowest"){
-                        return a.price-b.price
+                        return a.price-b.price;
                     }
                     else{
-                        return b.price-a.price
+                        return b.price-a.price;
                     }
                 })
             }
@@ -51,7 +55,28 @@ class Container extends Component {
         }
     }
 
+    addToCart = (prod)=>{
+const cartItems = this.state.cartItems;
+let alreadyInCart = false;
+cartItems.forEach((item)=>{
+    if(item._id === prod._id){
+        item.count++;
+        alreadyInCart = true;
+
+    }
+
+});
+if(alreadyInCart===false){
+    cartItems.push({...prod,count:1})
+}
+this.setState({cartItems:cartItems});
+console.log(this.state.cartItems);
+    }
+    
+    // let count = {this.state.products.length}
+
     render() {
+        
         return (
             <div className="grid-container">
                 <div className="header">
@@ -59,12 +84,12 @@ class Container extends Component {
                 </div>
                 <div className="main">
                     <div className="mainContent">
-                        <Filter sortProducts={this.sortProducts} 
+                        <Filter sortProducts={this.sortProducts} count= {this.state.products.length}
                         filterProducts = {this.filterProducts}></Filter> 
-                        <Product products={this.state.products}/>
+                        <Product products={this.state.products} addToCart={this.addToCart}/>
                     </div>
                     <div className="sideBar">
-                        Empty Cart
+                        <Cart cartItems = {this.state.cartItems}/>
                     </div>
                 </div>
                 <div className="footer">
@@ -79,52 +104,3 @@ class Container extends Component {
 export default Container;
 
 
-
-
-
-
-
-
-
-
-
-
-// import React, { Component } from 'react';
-// import './Container.css'
-// import Product from './Products/Product';
-// import data from '../data.json'
-// import Filter from './Filter/Filter'
-
-
-// class Container extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state={
-//             products:data.products
-//         }
-//     }
-//     render() {
-//         return (
-//             <div className="grid-container">
-//                 <div className="header">
-//                     <a href="/">FLIPKART</a>
-//                 </div>
-//                 <div className="main">
-//                     <div className="mainContent">
-//                         <Filter></Filter>
-//                         <Product products={this.state.products}/>
-//                     </div>
-//                     <div className="sideBar">
-//                         SIDEBAR
-//                     </div>
-//                 </div>
-//                 <div className="footer">
-//                     ALL RIGHTS RESERVED
-//                 </div>
-
-//             </div>
-//         );
-//     }
-// }
-
-// export default Container;
