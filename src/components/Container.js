@@ -48,7 +48,7 @@ class Container extends Component {
             this.setState ({
                 size : event.target.value,
                 products:data.products.filter ((product) => (
-                    product.availableSizes.indexOf(event.target.value) > 0
+                    product.availableSizes.indexOf(event.target.value) >= 0
 
                 ))
             })

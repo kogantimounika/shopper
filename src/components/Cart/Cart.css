@@ -1,0 +1,22 @@
+.carts {
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+p {
+    color: black;
+}
+
+.cart1{
+    height: 100px;
+    width: 100px;
+}
+
+.cart2 {
+    display: flex;
+}
+
+.cart3 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}

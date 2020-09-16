@@ -9,13 +9,6 @@ img{
     width: 300px;
 }
 
-li{
-    /* flex :0 1 29rem; */
-    /* height: 47rem; */
-    /* margin: 1rem; */
-    /* padding: 1rem; */
-}
-
 .products {
     list-style-type: none;
     display: flex;
