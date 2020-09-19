@@ -17,7 +17,6 @@ class Container extends Component {
         }
     }
 
-    
     sortProducts=(event) =>{
         // alert(event.target.value);
         const sort = event.target.value;
@@ -89,7 +88,9 @@ console.log(this.state.cartItems);
                         <Product products={this.state.products} addToCart={this.addToCart}/>
                     </div>
                     <div className="sideBar">
-                        <Cart cartItems = {this.state.cartItems}/>
+                        <Cart cartItems = {this.state.cartItems} 
+                        Proceed = {this.state.Proceed}
+                        Payment = {this.state.Payment}/>
                     </div>
                 </div>
                 <div className="footer">

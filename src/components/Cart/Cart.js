@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import './Cart.css';
+import Proceed from '../Proceed/Proceed';
 
 export default class Cart extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            checkOut : false
+        }
+    }
     render() { 
         const {cartItems} = this.props;
         return (
@@ -30,12 +37,18 @@ export default class Cart extends Component {
                     ))}
                             <div className="total">
                                 TOTAL AMOUNT:{cartItems.reduce((acc,val)=>(
-                                    acc+val.price*val.count
+                                    Math.round(acc+val.price*val.count)
                                 ),0)}
-
                             </div>
+                            <div className = "proceed">
+                                <button type = "button" 
+                                onClick = {() => this.setState({checkOut:true})}>Proceed</button>
+                            </div>
+                            {this.state.checkOut && 
+                            <Proceed/> 
+                            }
                 </ul>
-            </div>
+                </div>
         )
     }
 }

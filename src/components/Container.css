@@ -38,5 +38,7 @@ a {
 .sideBar{
   display: flex;
   flex:1 30rem;
+  margin: 2rem;
+  padding-top: 20px;
 } 
 
