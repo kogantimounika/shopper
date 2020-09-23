@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
 import './Payment.css';
 import history from '../history';
 
 
 
-export default class Payment extends Component {
+class Payment extends Component {
 
-    constructor() {
-        this.routeChange = this.routeChange.bind(this);
+    constructor(props) {
+        super(props); 
+            this.routeChange = this.routeChange.bind(this);
     }
 
     routeChange() {
-        let path = '../PayPage/PayPage';
+        let path = `../PayPage/PayPage`;
         history.push(path);
     }
 
@@ -34,3 +36,5 @@ export default class Payment extends Component {
         )
     }
 }
+
+export default withRouter(Payment);
