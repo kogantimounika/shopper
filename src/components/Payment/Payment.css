@@ -1,8 +1,7 @@
 .pay {
-    display: flex;
+  display: flex;
 }
 
 .button1 {
-    margin-block-start: 20px;
-
+  margin-block-start: 20px;
 }
