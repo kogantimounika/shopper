@@ -11,7 +11,7 @@
 // function App() {
 //   return (
 //     <div className="App">
-      
+
 //       <Router>
 //                     <Switch>
 //                       <Route exact path = "/" component = { Container} ></Route>
@@ -19,7 +19,7 @@
 
 //                         </Switch>
 //                 </Router>
-      
+
 //     </div>
 //   );
 // }
@@ -31,7 +31,7 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LogIn from './components/LogIn/LogIn';
 import Container from './components/Container';
 import PayPage from "./components/PayPage/PayPage";
@@ -51,17 +51,17 @@ function App() {
            
           </ul>
           </nav> */}
-       
-          <Switch>
-              <Route exact path='/' component={LogIn} />
-              <Route path='/container' component={Container} />
-              <Route path="/PayPage" component = {PayPage}></Route> 
 
-           
+          <Switch>
+            <Route exact path='/' component={LogIn} />
+            <Route path='/container' component={Container} />
+            <Route path="/PayPage" component={PayPage}></Route>
+
+
           </Switch>
         </div>
       </Router>
-      
+
     </div>
   );
 }
