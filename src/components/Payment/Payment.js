@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './Payment.css';
 import history from '../history';
 
@@ -8,8 +8,8 @@ import history from '../history';
 class Payment extends Component {
 
     constructor(props) {
-        super(props); 
-            this.routeChange = this.routeChange.bind(this);
+        super(props);
+        this.routeChange = this.routeChange.bind(this);
     }
 
     routeChange() {
@@ -20,17 +20,17 @@ class Payment extends Component {
     render() {
         return (
             <div>
-                <div className = "Pay">
+                <div className="Pay">
                     <h4>Payment type : </h4>
-                <label> 
-                    <input type="radio" name="radio" /> Credit/Debit
+                    <label>
+                        <input type="radio" name="radio" /> Credit/Debit
                 </label>
-                <label> 
-                    <input type="radio" name="radio" /> COD
+                    <label>
+                        <input type="radio" name="radio" /> COD
                 </label>
                 </div>
-                <div className = "button1">
-                <button type = "button" onClick={this.routeChange}>Confirm</button>
+                <div className="button1">
+                    <button type="button" onClick={this.routeChange}>Confirm</button>
                 </div>
             </div>
         )
